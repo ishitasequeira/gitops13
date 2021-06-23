@@ -32,6 +32,14 @@ rules:
   - create
   - patch
 - apiGroups:
+  - bitnami.com
+  resources:
+  - sealedsecrets
+  verbs:
+  - get
+  - patch
+  - create
+- apiGroups:
   - apps
   resources:
   - deployments
