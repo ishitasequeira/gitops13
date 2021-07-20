@@ -3,7 +3,7 @@ kind: Route
 metadata:
   creationTimestamp: null
   name: frontend-service
-  namespace: stage
+  namespace: ishita
 spec:
   port:
     targetPort: 8080
