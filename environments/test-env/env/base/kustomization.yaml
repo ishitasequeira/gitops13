@@ -1,4 +1,0 @@
-resources:
-- argocd-admin.yaml
-- test-env-environment.yaml
-- test-env-rolebinding.yaml
