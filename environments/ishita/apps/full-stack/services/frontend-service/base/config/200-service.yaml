@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/name: frontend-service
     app.kubernetes.io/part-of: full-stack
   name: frontend-service
-  namespace: stage
+  namespace: ishita
 spec:
   ports:
   - name: http
