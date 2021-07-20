@@ -25,5 +25,25 @@ environments:
       - github-push-binding
       template: app-ci-template
 - name: stage
+- apps:
+  - name: full-stack
+    services:
+    - name: frontend-service
+      pipelines:
+        integration:
+          bindings:
+          - test-env-full-stack-frontend-service-binding
+          - github-push-binding
+      source_url: https://github.com/ishitasequeira/frontend-service.git
+      webhook:
+        secret:
+          name: webhook-secret-test-env-frontend-service
+          namespace: cicd
+  name: test-env
+  pipelines:
+    integration:
+      bindings:
+      - github-push-binding
+      template: app-ci-template
 gitops_url: https://github.com/ishitasequeira/gitops13.git
 version: 1
