@@ -1,4 +1,0 @@
-resources:
-- argocd-admin.yaml
-- ishita-environment.yaml
-- ishita-rolebinding.yaml
