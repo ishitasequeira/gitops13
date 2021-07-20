@@ -1,0 +1,8 @@
+resources:
+- argo-app.yaml
+- cicd-app.yaml
+- dev-app-taxi-app.yaml
+- dev-env-app.yaml
+- ishita-env-app.yaml
+- ishita-full-stack-app.yaml
+- stage-env-app.yaml
