@@ -2,7 +2,7 @@ config:
   argocd:
     namespace: openshift-gitops
   pipelines:
-    name: cicd
+    name: test-cicd
 environments:
 - apps:
   - name: app-taxi
@@ -11,19 +11,19 @@ environments:
       pipelines:
         integration:
           bindings:
-          - dev-app-taxi-taxi-binding
+          - test-dev-app-taxi-taxi-binding
           - github-push-binding
       source_url: https://github.com/ishitasequeira/taxi.git
       webhook:
         secret:
-          name: webhook-secret-dev-taxi
-          namespace: cicd
-  name: dev
+          name: webhook-secret-test-dev-taxi
+          namespace: test-cicd
+  name: test-dev
   pipelines:
     integration:
       bindings:
       - github-push-binding
       template: app-ci-template
-- name: stage
+- name: test-stage
 gitops_url: https://github.com/ishitasequeira/gitops13.git
 version: 1

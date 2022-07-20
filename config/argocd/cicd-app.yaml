@@ -6,7 +6,7 @@ metadata:
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: cicd
+    namespace: test-cicd
     server: https://kubernetes.default.svc
   ignoreDifferences:
   - group: argoproj.io
@@ -31,7 +31,7 @@ spec:
     kind: Route
   project: default
   source:
-    path: config/cicd/overlays
+    path: config/test-cicd/overlays
     repoURL: https://github.com/ishitasequeira/gitops13.git
   syncPolicy:
     automated:
